@@ -2399,6 +2399,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
       <div style="position: relative; max-width: 1100px; margin: 0 auto;">
         <div data-reveal="1" style="font-size: 11.5px; letter-spacing: .28em; text-transform: uppercase; color: #14808F; margin-bottom: 18px;">{{ t.servicesKicker }}</div>
         <h2 data-reveal="1" style="font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: clamp(28px, 3.6vw, 46px); line-height: 1.12; color: #14252A; margin: 0 0 46px; max-width: 26ch;">{{ t.servicesTitle }}</h2>
+        <p data-reveal="1" style="font-size: 17px; line-height: 1.62; color: #5A6870; margin: -30px 0 44px; max-width: 62ch;">{{ t.servicesSub }}</p>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); gap: 18px;">
           <sc-for list="{{ visibleServices }}" as="s" hint-placeholder-count="9">
             <div data-reveal="1" style="background: #FFFFFF; border: 1px solid #E4DCD0; border-radius: 8px; padding: 28px 26px 24px; cursor: pointer; display: flex; flex-direction: column; gap: 12px; min-height: 186px;" style-hover="border-color: #14808F; background: #F7FCFD;">
@@ -3045,10 +3046,14 @@ class Component extends DCLogic {
       ],
       servicesKicker: ['Šta radimo', 'What we do'],
       servicesTitle: ['Devet oblasti, jedna ordinacija', 'Nine fields, one practice'],
-      whyTitle: ['Zašto House of Smile', 'Why House of Smile'],
+      servicesSub: [
+        'Preciznost, sigurnost i savršen rezultat standard su naše ordinacije. Sve intervencije, od redovne kontrole do oralne hirurgije, planiramo individualno i izvodimo savremenom opremom, uz minimalan oporavak.',
+        'Precision, safety and a perfect result are the standard here. Every procedure, from a routine check-up to oral surgery, is planned individually and carried out with modern equipment, with minimal recovery.'
+      ],
+      whyTitle: ['Zašto odabrati House of Smile', 'Why choose House of Smile'],
       whyText: [
-        'Od 2023. godine kroz ordinaciju je prošlo preko 2.400 pregleda i intervencija. Tim čine pet doktora: dva specijalista protetike, dva oralna hirurga i doktor za estetsku i konzervativnu stomatologiju.',
-        'Since 2023 we have done more than 2,400 exams and procedures. The team is five doctors: two prosthetics specialists, two oral surgeons and a dentist for aesthetic and conservative dentistry.'
+        'Stručnost kojoj verujete, osmeh koji zaslužujete. Od 2023. godine kroz ordinaciju je prošlo preko 2.400 pregleda i intervencija, a tim čine pet doktora: dva specijalista protetike, dva oralna hirurga i doktor za estetsku i konzervativnu stomatologiju.',
+        'Expertise you can trust, the smile you deserve. Since 2023 we have done more than 2,400 exams and procedures, and the team is five doctors: two prosthetics specialists, two oral surgeons and a dentist for aesthetic and conservative dentistry.'
       ],
       benefitsTitle: ['Šta se menja kod vas', 'What changes for you'],
       benefitsSub: [
@@ -3068,7 +3073,7 @@ class Component extends DCLogic {
       before: ['Pre', 'Before'], after: ['Posle', 'After'],
       revTitle: ['Utisci pacijenata', 'What patients say'],
       googleReview: ['Google recenzija', 'Google review'],
-      aboutTitle: ['Dobrodošli u prijatno okruženje naše ordinacije', 'Welcome to the calm of our practice'],
+      aboutTitle: ['Dobrodošli u House of Smile', 'Welcome to House of Smile'],
       guaranteeLabel: ['Naša garancija', 'Our guarantee'],
       guaranteeText: [
         'Garantujemo da ćete iz ordinacije izaći zadovoljni i sa širokim osmehom. Ako vam na završenom radu nešto ne izgleda ili ne leži kako smo se dogovorili, vratite se na kontrolu i ispravljamo bez naknade.',
@@ -3084,7 +3089,7 @@ class Component extends DCLogic {
       ],
       hoursLabel: ['Radno vreme', 'Opening hours'],
       hoursValue: ['Ponedeljak - nedelja, 12:00 - 20:00', 'Monday - Sunday, 12:00 - 20:00'],
-      finalTitle: ['Vreme je da se pobrinete za svoj osmeh', 'Time to take care of your smile'],
+      finalTitle: ['Jer svaki osmeh zaslužuje da zablista', 'Because every smile deserves to shine'],
       pricesTitle: ['Cenovnik i zakazivanje', 'Prices and booking'],
       pricesSub: [
         'Otvorite kategoriju, kliknite na uslugu koja vam treba i predložite datum, vreme i doktora. Prvi pregled je 0 evra.',
@@ -3564,10 +3569,12 @@ class Component extends DCLogic {
         { icon: this.icon('price'), text: p('Plan sa cenom po stavci dobijate pre nego što počnemo.', 'You get a plan with a price per item before we start.') }
       ],
       whyPoints: [
-        { text: p('Pet doktora, četiri specijalizacije, sve na jednoj adresi.', 'Five doctors, four specialisations, all at one address.') },
-        { text: p('Digitalna dijagnostika koju gledate zajedno sa doktorom.', 'Digital diagnostics you look at together with your doctor.') },
-        { text: p('Radimo svaki dan, i subotom i nedeljom, do 20 časova.', 'We work every day, Saturdays and Sundays included, until 20:00.') },
-        { text: p('Cenu svake stavke znate pre početka rada.', 'You know the price of every item before work begins.') }
+        { text: p('Vrhunski stručnjaci posvećeni pažljivoj i kvalitetnoj nezi.', 'Top specialists devoted to careful, high-quality care.') },
+        { text: p('Moderna oprema i najnovije stomatološke metode.', 'Modern equipment and the latest dental methods.') },
+        { text: p('Prijatna atmosfera i ljubazno osoblje, bez bola i bez stresa.', 'A pleasant atmosphere and kind staff, without pain or stress.') },
+        { text: p('Personalizovan plan terapije za svakog pacijenta.', 'A personalised treatment plan for every patient.') },
+        { text: p('Protetika, oralna hirurgija, implantologija, estetska i dečja stomatologija pod istim krovom.', 'Prosthetics, oral surgery, implantology, aesthetic and paediatric dentistry under one roof.') },
+        { text: p('Radimo svaki dan, i subotom i nedeljom, do 20 časova.', 'We work every day, Saturdays and Sundays included, until 20:00.') }
       ],
       benefits: [
         { text: p('Zagrizete jabuku bez računanja na kojoj strani.', 'You bite into an apple without working out which side to use.') },
@@ -3596,8 +3603,8 @@ class Component extends DCLogic {
       revNext: () => this.setState({ rev: (s.rev + 1) % revData.length }),
       revPrev: () => this.setState({ rev: (s.rev - 1 + revData.length) % revData.length }),
       aboutParas: [
-        { text: p('Prostor je uređen tako da odiše toplinom i spokojem, sa što manje bolničkog osećaja. Čekaonica je mala i tiha, a u ordinacijama je uvek dnevno svetlo.', 'The space is arranged to feel warm and calm, with as little hospital feeling as possible. The waiting room is small and quiet, and the surgeries always have daylight.') },
-        { text: p('Doktori su tu da vas dočekaju, pruže podršku i odgovore na sva pitanja, i ona koja vam se čine glupim.', 'The doctors are here to greet you, support you and answer every question, including the ones you think are silly.') },
+        { text: p('U House of Smile spajamo stručnost, preciznost i posvećenost sa prijatnom atmosferom i iskrenim osmehom. Prostor je uređen tako da odiše toplinom i spokojem, sa što manje bolničkog osećaja: čekaonica je mala i tiha, a u ordinacijama je uvek dnevno svetlo.', 'At House of Smile we combine expertise, precision and dedication with a calm atmosphere and a genuine smile. The space is arranged to feel warm and quiet, with as little hospital feeling as possible: the waiting room is small and still, and the surgeries always have daylight.') },
+        { text: p('Verujemo da lep osmeh nije samo estetski detalj, već odraz zdravlja, samopouzdanja i unutrašnje ravnoteže. Doktori su tu da vas dočekaju, pruže podršku i odgovore na sva pitanja, i ona koja vam se čine glupim.', 'We believe a beautiful smile is not only an aesthetic detail but a reflection of health, confidence and inner balance. The doctors are here to greet you, support you and answer every question, including the ones you think are silly.') },
         { text: p('Za nas svaki osmeh ima priču. Cilj je da vaš bude zdrav, prirodan i samouveren.', 'Every smile has a story here. The goal is for yours to be healthy, natural and confident.') }
       ],
       faqs: faqs,
