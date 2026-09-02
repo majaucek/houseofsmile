@@ -3497,11 +3497,13 @@ class Component extends DCLogic {
     const navLinks = [
       { label: t.navPrices, style: navStyle(s.page === 'prices'), go: () => this.go('prices', '__top') },
       { label: t.navTeam, style: navStyle(s.page === 'doctor'), go: () => this.go('home', 'tim') },
+      { label: t.navWorks, style: navStyle(false), go: () => this.go('home', 'radovi') },
       { label: t.navBlog, style: navStyle(false), go: () => {} }
     ];
     const mobileLinks = [
       { label: t.navPrices, go: () => this.go('prices', '__top') },
       { label: t.navTeam, go: () => this.go('home', 'tim') },
+      { label: t.navWorks, go: () => this.go('home', 'radovi') },
       { label: t.navBlog, go: () => this.setState({ navOpen: false }) }
     ];
 
